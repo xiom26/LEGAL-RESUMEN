@@ -1,38 +1,90 @@
-/* ===== GUC RESUMEN v1.0.3 — tabla y tarjeta clonadas del plugin guc-casos ===== */
-#guc-resumen.guc-wrap{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#2b2b2b;}
+/* ===== GUC RESUMEN v1.0.3 — estilo LEGAL ENGINEERING ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --le-primary: #68092b;
+  --le-secondary: #42041a;
+  --le-gold-1: #d2ae6d;
+  --le-gold-2: #bb985c;
+  --le-gold-3: #b29f59;
+  --le-text: #2c1b1f;
+  --le-surface: #fff8f2;
+  --le-border: #ecd7ba;
+}
+
+#guc-resumen.guc-wrap{
+  font-family:'Poppins','Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--le-text);
+  background:#fff8f2;
+  padding:12px;
+  border-radius:16px;
+}
 
 /* título igual */
-#guc-resumen .guc-title{font-weight:800;font-size:22px;margin:0 0 12px;}
+#guc-resumen .guc-title{
+  font-family:'Montserrat','Poppins',sans-serif;
+  font-weight:800;
+  font-size:22px;
+  margin:0 0 12px;
+  color:var(--le-primary);
+  letter-spacing:0.3px;
+}
 
-/* tarjetas con misma estética */
+/* tarjetas con estética LEGAL ENGINEERING */
 #guc-resumen .guc-cards{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:12px;}
 @media(min-width:900px){#guc-resumen .guc-cards{grid-template-columns:repeat(3,1fr);}}
 #guc-resumen .guc-card{
-  background:#c8b393;color:#000;
-  border:1px solid #d9c8b3;border-radius:14px;
-  box-shadow:0 6px 20px rgba(0,0,0,.06);
-  padding:12px 16px;display:flex;align-items:center;justify-content:space-between;
+  background:var(--le-gold-1);
+  color:var(--le-secondary);
+  border:1px solid var(--le-gold-3);
+  border-radius:16px;
+  box-shadow:0 10px 26px rgba(66,4,26,0.12);
+  padding:14px 18px;display:flex;align-items:center;justify-content:space-between;
 }
 #guc-resumen .guc-card .label{font-weight:700;}
-#guc-resumen .guc-card .value{min-width:36px;text-align:center;font-weight:800;font-size:16px;background:#efe8dc;border:1px solid #d9c8b3;border-radius:999px;padding:6px 10px;}
+#guc-resumen .guc-card .value{
+  min-width:42px;text-align:center;font-weight:800;font-size:16px;
+  background:#fff5e6;
+  color:var(--le-primary);
+  border:1px solid var(--le-gold-2);
+  border-radius:999px;
+  padding:8px 12px;
+  box-shadow:inset 0 1px 2px rgba(255,255,255,0.4);
+}
 
 /* contenedor tipo tarjeta como guc-casos */
 #guc-resumen .guc-table-wrap {
-  background: #fff;
-  border: 1px solid #ece7df;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.06);
-  padding: 12px;          /* ← nuevo margen interno */
+  background: var(--le-surface);
+  border: 1px solid var(--le-border);
+  border-radius: 15px;
+  box-shadow: 0 10px 26px rgba(66,4,26,0.12);
+  padding: 14px;
   overflow: hidden;
 }
 
 
-/* tabla replica guc-casos .guc-table */
-#guc-resumen .guc-table{width:100%;border-collapse:separate;border-spacing:0;}
-#guc-resumen .guc-table thead th{
-  background:#f6f1ea;color:#2b241d;font-weight:700;padding:12px;border-bottom:1px solid #eadfce;text-align:left;
+/* tabla con acentos LEGAL ENGINEERING */
+#guc-resumen .guc-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  border-radius:15px;
+  overflow:hidden;
 }
-#guc-resumen .guc-table td{padding:12px;border-bottom:1px solid #f1ebe2;color:#2b2b2b;}
+#guc-resumen .guc-table thead th{
+  background:var(--le-primary);
+  color:#ffffff;
+  font-weight:700;
+  padding:12px;
+  border-bottom:1px solid var(--le-secondary);
+  text-align:center;
+  font-family:'Montserrat','Poppins',sans-serif;
+  letter-spacing:0.2px;
+}
+#guc-resumen .guc-table td{padding:12px;border-bottom:1px solid var(--le-border);color:var(--le-text);background:#fff;text-align:center;}
 /* columnas divisorias suaves como en la captura */
 #guc-resumen .guc-table thead th+th,
-#guc-resumen .guc-table tbody td+td{border-left:1px solid #eadfce;}
+#guc-resumen .guc-table tbody td+td{border-left:1px solid var(--le-border);}
+
+#guc-resumen .guc-table tbody tr:nth-child(odd){background:#fff7ec;}
+#guc-resumen .guc-table tbody tr:hover{background:rgba(104,9,43,0.05);}/* realce UX */
