@@ -15,7 +15,7 @@
 #guc-resumen.guc-wrap{
   font-family:'Poppins','Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--le-text);
-  background:linear-gradient(135deg, rgba(210,174,109,0.14), rgba(68,4,25,0.08));
+  background:#fff8f2;
   padding:12px;
   border-radius:16px;
 }
@@ -34,11 +34,11 @@
 #guc-resumen .guc-cards{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:12px;}
 @media(min-width:900px){#guc-resumen .guc-cards{grid-template-columns:repeat(3,1fr);}}
 #guc-resumen .guc-card{
-  background:linear-gradient(145deg, var(--le-gold-1), var(--le-gold-2));
+  background:var(--le-gold-1);
   color:var(--le-secondary);
   border:1px solid var(--le-gold-3);
   border-radius:16px;
-  box-shadow:0 10px 26px rgba(66,4,26,0.14);
+  box-shadow:0 10px 26px rgba(66,4,26,0.12);
   padding:14px 18px;display:flex;align-items:center;justify-content:space-between;
 }
 #guc-resumen .guc-card .label{font-weight:700;}
@@ -56,29 +56,35 @@
 #guc-resumen .guc-table-wrap {
   background: var(--le-surface);
   border: 1px solid var(--le-border);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(66,4,26,0.14);
+  border-radius: 15px;
+  box-shadow: 0 10px 26px rgba(66,4,26,0.12);
   padding: 14px;
   overflow: hidden;
 }
 
 
 /* tabla con acentos LEGAL ENGINEERING */
-#guc-resumen .guc-table{width:100%;border-collapse:separate;border-spacing:0;}
+#guc-resumen .guc-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  border-radius:15px;
+  overflow:hidden;
+}
 #guc-resumen .guc-table thead th{
-  background:linear-gradient(135deg, var(--le-primary), var(--le-secondary));
-  color:#fefaf4;
+  background:var(--le-primary);
+  color:#ffffff;
   font-weight:700;
   padding:12px;
   border-bottom:1px solid var(--le-secondary);
-  text-align:left;
+  text-align:center;
   font-family:'Montserrat','Poppins',sans-serif;
   letter-spacing:0.2px;
 }
-#guc-resumen .guc-table td{padding:12px;border-bottom:1px solid var(--le-border);color:var(--le-text);background:#fff;}
+#guc-resumen .guc-table td{padding:12px;border-bottom:1px solid var(--le-border);color:var(--le-text);background:#fff;text-align:center;}
 /* columnas divisorias suaves como en la captura */
 #guc-resumen .guc-table thead th+th,
 #guc-resumen .guc-table tbody td+td{border-left:1px solid var(--le-border);}
 
-#guc-resumen .guc-table tbody tr:nth-child(odd){background:rgba(210,174,109,0.08);}
-#guc-resumen .guc-table tbody tr:hover{background:rgba(104,9,43,0.07);}/* realce UX */
+#guc-resumen .guc-table tbody tr:nth-child(odd){background:#fff7ec;}
+#guc-resumen .guc-table tbody tr:hover{background:rgba(104,9,43,0.05);}/* realce UX */
