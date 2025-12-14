@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
       const tbody = $('#tabla-casos tbody');
       tbody.empty();
       (resp.casos || []).forEach(function(c){
-        const fecha = c.estado_fecha || '';
+        const fecha = formatearFecha(c.estado_fecha);
         const tr = `<tr>
           <td>${c.expediente || ''}</td>
           <td>${fecha}</td>
@@ -22,4 +22,10 @@ jQuery(document).ready(function($){
   }
 
   cargarResumen();
+
+  function formatearFecha(fecha){
+    if(!fecha) return '';
+    const texto = String(fecha).trim();
+    return texto.length >= 10 ? texto.slice(0,10) : texto;
+  }
 });
